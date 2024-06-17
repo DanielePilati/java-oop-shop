@@ -9,7 +9,7 @@ public class Prodotto {
 	private String nome;
 	private String descrizione;
 	private double prezzo;
-	private int iva;
+	private double iva;
 	
 
 	public Prodotto() {
@@ -38,7 +38,7 @@ public class Prodotto {
 	public void setPrezzo(double prezzo) {
 		this.prezzo = prezzo;
 	}
-	public int getIva() {
+	public double getIva() {
 		return iva;
 	}
 	public void setIva(int iva) {
@@ -46,6 +46,15 @@ public class Prodotto {
 	}
 	public String prezzoBase() {
 		return String.valueOf(prezzo);
+	}
+	public double prezzoComprensivoIvaNumber() {
+		return this.prezzo + this.iva;
+	}
+	public String prezzoComprensivoIvaText() {
+		return String.valueOf(this.prezzo + this.iva);
+	}
+	public String descrizioneMatricola() {
+		return "Prodotto: "+codice+"-"+nome;
 	}
 	
 }
