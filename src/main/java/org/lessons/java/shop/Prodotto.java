@@ -2,7 +2,7 @@ package org.lessons.java.shop;
 
 public class Prodotto {
 
-
+	private static final int PAD_LENGHT = 8;
 	private int maxCode=999999;
 	private int minCode=0;
 	private int codice;
@@ -15,7 +15,13 @@ public class Prodotto {
 	public Prodotto() {
 		this.codice = (int) (Math.random()* (maxCode - minCode + 1)) + minCode;
 	}
-	
+	public Prodotto(String nome, String descrizione , double prezzo, double iva) {
+		this.nome = nome;
+		this.descrizione = descrizione;
+		this.prezzo = prezzo;
+		this.iva = iva;
+		this.codice = (int) (Math.random()* (maxCode - minCode + 1)) + minCode;
+	}
 	
 	public int getCodice() {
 		return this.codice;
@@ -56,5 +62,7 @@ public class Prodotto {
 	public String descrizioneMatricola() {
 		return "Prodotto: "+codice+"-"+nome;
 	}
-	
+    public static String padLeft(int code) {  
+    	return String.format("%0"+PAD_LENGHT+"d",code);
+    }  
 }
