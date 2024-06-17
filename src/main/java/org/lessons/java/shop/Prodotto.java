@@ -11,6 +11,15 @@ public class Prodotto {
 	private double prezzo;
 	private int iva;
 	
+
+	public Prodotto() {
+		this.codice = (int) (Math.random()* (maxCode - minCode + 1)) + minCode;
+	}
+	
+	
+	public int getCodice() {
+		return this.codice;
+	}
 	public String getNome() {
 		return nome;
 	}
@@ -35,16 +44,8 @@ public class Prodotto {
 	public void setIva(int iva) {
 		this.iva = iva;
 	}
-	public Prodotto() {
-		this.codice = (int) (Math.random()* (maxCode - minCode + 1)) + minCode;
+	public String prezzoBase() {
+		return String.valueOf(prezzo);
 	}
-	public int getCodice() {
-		return this.codice;
-	}
-
-	
-	
-	
-	
 	
 }
