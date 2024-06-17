@@ -9,14 +9,17 @@ public class Main {
 		Prodotto prodotto2 = new Prodotto("gino","ciaccio",30,12);
 		
 		System.out.println("codice " + prodotto1.getCodice());
+		System.out.println(Prodotto.padLeft(prodotto1.getCodice()));
 		System.out.println("ivato " + prodotto1.prezzoComprensivoIvaNumber());
 		System.out.println("base " + prodotto1.prezzoBase());
 		
 		System.out.println("codice " + prodotto2.getCodice());
+		System.out.println(Prodotto.padLeft(prodotto2.getCodice()));
 		System.out.println("ivato " + prodotto2.prezzoComprensivoIvaNumber());
 		System.out.println("base " + prodotto2.prezzoBase());
 		
-		System.out.println(Prodotto.padLeft(prodotto1.getCodice()));
+		
+		
 	}
 
 }

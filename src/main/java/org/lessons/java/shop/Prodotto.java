@@ -64,5 +64,6 @@ public class Prodotto {
 	}
     public static String padLeft(int code) {  
     	return String.format("%0"+PAD_LENGHT+"d",code);
+    	
     }  
 }
